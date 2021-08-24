@@ -1,5 +1,7 @@
 package lesson8.Sentence2;
 
+import java.util.Scanner;
+
 public class Student {
     private int studentCode;
     private String name;
@@ -16,6 +18,22 @@ public class Student {
     }
 
     public Student() {
+    }
+    public void input(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter studentCode :");
+        studentCode = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter name:");
+        name = sc.nextLine();
+        System.out.println("Enter major: ");
+        major = sc.nextLine();
+        System.out.println("Enter theoryScore:");
+        theoryScore = sc.nextFloat();
+        sc.nextLine();
+        System.out.println("Enter praticeScore:");
+        praticeScore = sc.nextFloat();
+        sc.nextLine();
     }
 
     public double getStudentCode() {
