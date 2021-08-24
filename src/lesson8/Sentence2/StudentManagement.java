@@ -1,4 +1,4 @@
-package lesson8.Sentence1;
+package lesson8.Sentence2;
 
 import java.util.Scanner;
 
