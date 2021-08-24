@@ -1,4 +1,4 @@
-package lesson8.Sentence1;
+package lesson8.Sentence2;
 
 public class Student {
     private int studentCode;
