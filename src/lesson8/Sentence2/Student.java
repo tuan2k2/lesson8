@@ -19,23 +19,6 @@ public class Student {
 
     public Student() {
     }
-    public void input(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter studentCode :");
-        studentCode = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Enter name:");
-        name = sc.nextLine();
-        System.out.println("Enter major: ");
-        major = sc.nextLine();
-        System.out.println("Enter theoryScore:");
-        theoryScore = sc.nextFloat();
-        sc.nextLine();
-        System.out.println("Enter praticeScore:");
-        praticeScore = sc.nextFloat();
-        sc.nextLine();
-    }
-
     public double getStudentCode() {
         return studentCode;
     }
@@ -66,7 +49,6 @@ public class Student {
     public void setTheoryScore(float theoryScore) {
         this.theoryScore = theoryScore;
     }
-
     public float getPraticeScore() {
         return praticeScore;
     }
@@ -81,9 +63,6 @@ public class Student {
         return dtb;
     }
     public String toString(){
-        return studentCode  + name  + major + theoryScore + praticeScore  + calculateAverageScore(theoryScore,praticeScore);
-    }
-    public void inSV() {
-        System.out.printf("%8d %9s %15s %6s %20s %10s  %2f %10s %2f %10s %2f \n", studentCode  ,"",  name ,"", major ,"",theoryScore , "" , praticeScore , "", calculateAverageScore(theoryScore,praticeScore));
+        return "[ MSV: " +  studentCode + ";" + " HỌ TÊN: " + name + ";" + " CHUYÊN NGÀNH: " + major + ";" + " DLT: " + theoryScore + ";" + " DTH: " + praticeScore  + ";" + " DTB: "  + calculateAverageScore(theoryScore,praticeScore) + " ]";
     }
 }
