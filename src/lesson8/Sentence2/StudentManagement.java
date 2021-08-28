@@ -1,18 +1,38 @@
 package lesson8.Sentence2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentManagement {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Student sv1 = new Student(20052002, "Trần Anh Tuấn", "Công nghệ thông tin", 5, 5);
-        Student sv2 = new Student();
-        Student sv3 = new Student();
-        sv2.input();
-        sv3.input();
-        System.out.printf("%8s %2s %15s %4s %20s %6s %20s %5s %10s %5s %10s \n ","Mã sinh viên","","Họ tên","","Ngành","","Điểm lý thuyết" ,"","Điểm thực hành","","Điểm trung bình");
-        sv1.inSV();
-        sv2.inSV();
-        sv3.inSV();
+    private ArrayList<Student> accountList = new ArrayList<>();
+
+    public ArrayList<Student> getList() {
+        return accountList;
+    }
+    public void addAccount(Student account) {
+        for (Student ac : accountList){
+            if (ac.getStudentCode() == account.getStudentCode()){
+                System.out.println("Mã sinh viên đã tồn tại");
+                return;
+            }
+        }
+        accountList.add(account);
+    }
+
+    public void removeAccount(Student account) {
+        accountList.remove(account);
+    }
+
+    public Student searchByID(int code) {
+        for (Student account: accountList) {
+            if( account.getStudentCode() == code) {
+                return account;
+            }
+        }
+        System.out.println("Mã sinh viên không hợp lệ");
+        return null;
+    }
+    public void fix(int n , Student account){
+        accountList.set(n,account);
     }
 }
