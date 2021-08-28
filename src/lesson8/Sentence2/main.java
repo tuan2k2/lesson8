@@ -25,7 +25,7 @@ public class main {
                         break;
                     } else{
                         studentManagement.removeAccount(student2);
-                        System.out.println("Đã xóa thành công");
+                        System.out.println("Đã xóa thành công!!");
                     }
                     break;
                 case 3:
